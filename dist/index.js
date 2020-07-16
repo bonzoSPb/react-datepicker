@@ -2334,6 +2334,7 @@ var gt = [
                   type: "button",
                   className: n.join(" "),
                   onClick: a,
+                  tabIndex: -1,
                   "aria-label": o ? l : p
                 },
                 o
@@ -2395,6 +2396,7 @@ var gt = [
                   type: "button",
                   className: n.join(" "),
                   onClick: a,
+                  tabIndex: -1,
                   "aria-label": o ? l : p
                 },
                 o ? r.props.nextYearButtonLabel : r.props.nextMonthButtonLabel
@@ -3119,6 +3121,7 @@ var St = (function(e) {
           var t = e.key;
           if (s.state.open || s.props.inline || s.props.preventOpenOnFocus) {
             if (s.state.open) {
+              if ("Tab" === t) return void s.setOpen(!1);
               if ("ArrowDown" === t || "ArrowUp" === t) {
                 e.preventDefault();
                 var r =

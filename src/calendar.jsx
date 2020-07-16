@@ -409,6 +409,7 @@ export default class Calendar extends React.Component {
         type="button"
         className={classes.join(" ")}
         onClick={clickHandler}
+        tabIndex={-1}
         aria-label={isForYear ? previousYearAriaLabel : previousMonthAriaLabel}
       >
         {isForYear
@@ -480,6 +481,7 @@ export default class Calendar extends React.Component {
         type="button"
         className={classes.join(" ")}
         onClick={clickHandler}
+        tabIndex={-1}
         aria-label={isForYear ? nextYearAriaLabel : nextMonthAriaLabel}
       >
         {isForYear
