@@ -3121,7 +3121,14 @@ var St = (function(e) {
           var t = e.key;
           if (s.state.open || s.props.inline || s.props.preventOpenOnFocus) {
             if (s.state.open) {
-              if ("Tab" === t) return void s.setOpen(!1);
+              if ("Tab" === t)
+                return (
+                  e.preventDefault(),
+                  void (s.inputOk() && s.state.lastPreSelectChange === Et
+                    ? (s.handleSelect(n, e),
+                      !s.props.shouldCloseOnSelect && s.setPreSelection(n))
+                    : s.setOpen(!1))
+                );
               if ("ArrowDown" === t || "ArrowUp" === t) {
                 e.preventDefault();
                 var r =
