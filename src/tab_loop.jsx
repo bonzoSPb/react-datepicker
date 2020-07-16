@@ -58,13 +58,11 @@ export default class TabLoop extends React.Component {
       <div className="react-datepicker__tab-loop" ref={this.tabLoopRef}>
         <div
           className="react-datepicker__tab-loop__start"
-          tabIndex="0"
           onFocus={this.handleFocusStart}
         />
         {this.props.children}
         <div
           className="react-datepicker__tab-loop__end"
-          tabIndex="0"
           onFocus={this.handleFocusEnd}
         />
       </div>

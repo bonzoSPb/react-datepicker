@@ -1391,11 +1391,8 @@ var lt = Z(
           return "".concat(i, " ").concat(be(r, "PPPP"));
         }),
         oe(ue(e), "getTabIndex", function(t, r) {
-          var n = t || e.props.selected,
-            a = r || e.props.preSelection;
-          return e.isKeyboardSelected() || (e.isSameDay(n) && Ye(a, n))
-            ? 0
-            : -1;
+          t || e.props.selected, r || e.props.preSelection;
+          return -1;
         }),
         oe(ue(e), "handleFocusDay", function() {
           var t =
@@ -2832,13 +2829,11 @@ var gt = [
                   },
                   t.createElement("div", {
                     className: "react-datepicker__tab-loop__start",
-                    tabIndex: "0",
                     onFocus: this.handleFocusStart
                   }),
                   this.props.children,
                   t.createElement("div", {
                     className: "react-datepicker__tab-loop__end",
-                    tabIndex: "0",
                     onFocus: this.handleFocusEnd
                   })
                 )
@@ -3129,7 +3124,7 @@ var St = (function(e) {
                 var r =
                   s.calendar.componentNode &&
                   s.calendar.componentNode.querySelector(
-                    '.react-datepicker__day[tabindex="-1"]'
+                    '.react-datepicker__day[tabindex="0"]'
                   );
                 return void (r && r.focus());
               }

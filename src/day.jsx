@@ -243,11 +243,11 @@ export default class Day extends React.Component {
     const selectedDay = selected || this.props.selected;
     const preSelectionDay = preSelection || this.props.preSelection;
 
-    const tabIndex =
-      this.isKeyboardSelected() ||
+    const tabIndex = -1;
+    /*      this.isKeyboardSelected() ||
       (this.isSameDay(selectedDay) && isSameDay(preSelectionDay, selectedDay))
         ? 0
-        : -1;
+        : -1;*/
 
     return tabIndex;
   };
