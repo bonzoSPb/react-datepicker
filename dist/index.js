@@ -3129,7 +3129,7 @@ var St = (function(e) {
                 var r =
                   s.calendar.componentNode &&
                   s.calendar.componentNode.querySelector(
-                    '.react-datepicker__day[tabindex="0"]'
+                    '.react-datepicker__day[tabindex="-1"]'
                   );
                 return void (r && r.focus());
               }

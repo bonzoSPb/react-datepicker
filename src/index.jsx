@@ -574,7 +574,7 @@ export default class DatePicker extends React.Component {
         const selectedDay =
           this.calendar.componentNode &&
           this.calendar.componentNode.querySelector(
-            '.react-datepicker__day[tabindex="0"]'
+            '.react-datepicker__day[tabindex="-1"]'
           );
         selectedDay && selectedDay.focus();
         return;
