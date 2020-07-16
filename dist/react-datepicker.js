@@ -215,8 +215,8 @@
   D,
   w,
   g,
-  k,
   b,
+  k,
   C,
   _,
   O,
@@ -373,7 +373,7 @@
   function ge(e, t) {
     return !t || ("object" != typeof t && "function" != typeof t) ? we(e) : t;
   }
-  function ke(e) {
+  function be(e) {
     return function() {
       var t,
         r = ye(e);
@@ -384,7 +384,7 @@
       return ge(this, t);
     };
   }
-  function be(e, t) {
+  function ke(e, t) {
     switch (e) {
       case "P":
         return t.date({ width: "short" });
@@ -449,10 +449,10 @@
       w && Object.prototype.hasOwnProperty.call(w, "default") ? w.default : w),
     (g =
       g && Object.prototype.hasOwnProperty.call(g, "default") ? g.default : g),
-    (k =
-      k && Object.prototype.hasOwnProperty.call(k, "default") ? k.default : k),
     (b =
       b && Object.prototype.hasOwnProperty.call(b, "default") ? b.default : b),
+    (k =
+      k && Object.prototype.hasOwnProperty.call(k, "default") ? k.default : k),
     (C =
       C && Object.prototype.hasOwnProperty.call(C, "default") ? C.default : C),
     (_ =
@@ -550,7 +550,7 @@
           n = e.match(/(P+)(p+)?/),
           a = n[1],
           o = n[2];
-        if (!o) return be(e, t);
+        if (!o) return ke(e, t);
         switch (a) {
           case "P":
             r = t.dateTime({ width: "short" });
@@ -565,7 +565,7 @@
           default:
             r = t.dateTime({ width: "full" });
         }
-        return r.replace("{{date}}", be(a, t)).replace("{{time}}", Ce(o, t));
+        return r.replace("{{date}}", ke(a, t)).replace("{{time}}", Ce(o, t));
       }
     },
     Oe = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
@@ -802,7 +802,7 @@
   }
   function et(e, t) {
     for (var r = t.length, n = 0; n < r; n++)
-      if (k(t[n]) === k(e) && g(t[n]) === g(e)) return !0;
+      if (b(t[n]) === b(e) && g(t[n]) === g(e)) return !0;
     return !1;
   }
   function tt(e, t) {
@@ -811,9 +811,9 @@
     if (!r || !n) throw new Error("Both minTime and maxTime props required");
     var a,
       o = Se(),
-      s = x(N(o, g(e)), k(e)),
-      p = x(N(o, g(r)), k(r)),
-      i = x(N(o, g(n)), k(n));
+      s = x(N(o, g(e)), b(e)),
+      p = x(N(o, g(r)), b(r)),
+      i = x(N(o, g(n)), b(n));
     try {
       a = !re(s, { start: p, end: i });
     } catch (e) {
@@ -934,7 +934,7 @@
   }
   function ct(e, t, r, n, a) {
     for (var o = a.length, s = [], c = 0; c < o; c++) {
-      var l = p(i(e, k(a[c])), g(a[c])),
+      var l = p(i(e, b(a[c])), g(a[c])),
         d = p(e, (r + 1) * n);
       ee(l, t) && te(l, d) && s.push(a[c]);
     }
@@ -954,7 +954,7 @@
   var ut = se(
       (function(e) {
         me(a, e);
-        var r = ke(a);
+        var r = be(a);
         function a(e) {
           var n;
           ce(this, a),
@@ -1080,7 +1080,7 @@
     ),
     ht = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n() {
         var e;
         ce(this, n);
@@ -1212,7 +1212,7 @@
     ft = se(
       (function(e) {
         me(n, e);
-        var r = ke(n);
+        var r = be(n);
         function n() {
           var e;
           ce(this, n);
@@ -1278,7 +1278,7 @@
     ),
     mt = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n() {
         var e;
         ce(this, n);
@@ -1402,7 +1402,7 @@
   var vt = se(
       (function(e) {
         me(a, e);
-        var r = ke(a);
+        var r = be(a);
         function a(e) {
           var n;
           return (
@@ -1471,7 +1471,7 @@
     ),
     Dt = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n() {
         var e;
         ce(this, n);
@@ -1597,7 +1597,7 @@
     })(t.Component),
     wt = (function(e) {
       me(a, e);
-      var r = ke(a);
+      var r = be(a);
       function a() {
         var e;
         ce(this, a);
@@ -1697,7 +1697,7 @@
             return !(!n || !a) && Re(a, r);
           }),
           ue(we(e), "isWeekend", function() {
-            var t = b(e.props.day);
+            var t = k(e.props.day);
             return 0 === t || 6 === t;
           }),
           ue(we(e), "isOutsideMonth", function() {
@@ -1806,7 +1806,7 @@
     })(t.Component),
     gt = (function(e) {
       me(a, e);
-      var r = ke(a);
+      var r = be(a);
       function a() {
         var e;
         ce(this, a);
@@ -1851,9 +1851,9 @@
         a
       );
     })(t.Component),
-    kt = (function(e) {
+    bt = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n() {
         var e;
         ce(this, n);
@@ -1964,9 +1964,9 @@
         n
       );
     })(t.Component),
-    bt = (function(e) {
+    kt = (function(e) {
       me(a, e);
-      var r = ke(a);
+      var r = be(a);
       function a() {
         var e;
         ce(this, a);
@@ -2028,7 +2028,7 @@
                 o = 0,
                 s = !1;
               r.push(
-                t.createElement(kt, {
+                t.createElement(bt, {
                   ariaLabelPrefix: e.props.weekAriaLabelPrefix,
                   chooseDayAriaLabelPrefix: e.props.chooseDayAriaLabelPrefix,
                   disabledDayAriaLabelPrefix:
@@ -2226,7 +2226,7 @@
     })(t.Component),
     Ct = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n() {
         var e;
         ce(this, n);
@@ -2249,7 +2249,7 @@
             ];
             return (
               e.props.selected &&
-                r === k(t) &&
+                r === b(t) &&
                 n === g(t) &&
                 a.push("react-datepicker__time-list-item--selected"),
               (((e.props.minTime || e.props.maxTime) && tt(t, e.props)) ||
@@ -2257,7 +2257,7 @@
                 (e.props.includeTimes && !et(t, e.props.includeTimes))) &&
                 a.push("react-datepicker__time-list-item--disabled"),
               e.props.injectTimes &&
-                (60 * k(t) + g(t)) % e.props.intervals != 0 &&
+                (60 * b(t) + g(t)) % e.props.intervals != 0 &&
                 a.push("react-datepicker__time-list-item--injected"),
               a.join(" ")
             );
@@ -2268,7 +2268,7 @@
                 n = e.props.format ? e.props.format : "p",
                 a = e.props.intervals,
                 o = e.props.selected || e.props.openToDate || Se(),
-                s = k(o),
+                s = b(o),
                 i = g(o),
                 c = Ye(Se()),
                 l = 1440 / a,
@@ -2295,7 +2295,7 @@
                   onClick: e.handleClick.bind(we(e), r),
                   className: e.liClasses(r, s, i),
                   ref: function(t) {
-                    s === k(r) && i >= g(r) && (e.centerLi = t);
+                    s === b(r) && i >= g(r) && (e.centerLi = t);
                   }
                 },
                 Ee(r, n, e.props.locale)
@@ -2402,7 +2402,7 @@
   });
   var _t = (function(e) {
     me(n, e);
-    var r = ke(n);
+    var r = be(n);
     function n(e) {
       var a;
       return (
@@ -2490,7 +2490,7 @@
     ],
     Mt = (function(e) {
       me(a, e);
-      var r = ke(a);
+      var r = be(a);
       function a(e) {
         var n;
         return (
@@ -2969,7 +2969,7 @@
                       className: "react-datepicker__month-container"
                     },
                     n.renderHeader({ monthDate: p, i: o }),
-                    t.createElement(bt, {
+                    t.createElement(kt, {
                       chooseDayAriaLabelPrefix:
                         n.props.chooseDayAriaLabelPrefix,
                       disabledDayAriaLabelPrefix:
@@ -3145,7 +3145,7 @@
     },
     Et = (function(e) {
       me(n, e);
-      var r = ke(n);
+      var r = be(n);
       function n(e) {
         var a;
         return (
@@ -3212,7 +3212,7 @@
     })(t.Component),
     Nt = (function(e) {
       me(a, e);
-      var r = ke(a);
+      var r = be(a);
       function a() {
         return ce(this, a), r.apply(this, arguments);
       }
@@ -3301,7 +3301,7 @@
     xt = se(Mt);
   var Tt = (function(e) {
       me(o, e);
-      var r = ke(o);
+      var r = be(o);
       function o(e) {
         var s;
         return (
@@ -3443,7 +3443,7 @@
                   if (s.props.selected) {
                     var o = s.props.selected;
                     r && (o = Se(a)),
-                      (a = Ne(a, { hour: k(o), minute: g(o), second: w(o) }));
+                      (a = Ne(a, { hour: b(o), minute: g(o), second: w(o) }));
                   }
                   s.props.inline || s.setState({ preSelection: a }),
                     s.props.inline &&
@@ -3471,7 +3471,7 @@
           ue(we(s), "handleTimeChange", function(e) {
             var t = Ne(
               s.props.selected ? s.props.selected : s.getPreSelection(),
-              { hour: k(e), minute: g(e) }
+              { hour: b(e), minute: g(e) }
             );
             s.setState({ preSelection: t }),
               s.props.onChange(t),
@@ -3488,14 +3488,6 @@
             var t = e.key;
             if (s.state.open || s.props.inline || s.props.preventOpenOnFocus) {
               if (s.state.open) {
-                if ("Tab" === t)
-                  return (
-                    e.preventDefault(),
-                    void (s.inputOk() && s.state.lastPreSelectChange === It
-                      ? (s.handleSelect(n, e),
-                        !s.props.shouldCloseOnSelect && s.setPreSelection(n))
-                      : s.setOpen(!1))
-                  );
                 if ("ArrowDown" === t || "ArrowUp" === t) {
                   e.preventDefault();
                   var r =
@@ -3506,7 +3498,7 @@
                   return void (r && r.focus());
                 }
                 var n = Se(s.state.preSelection);
-                "Enter" === t
+                "Enter" === t || "Tab" === t
                   ? (e.preventDefault(),
                     s.inputOk() && s.state.lastPreSelectChange === It
                       ? (s.handleSelect(n, e),

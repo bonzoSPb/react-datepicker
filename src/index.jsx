@@ -569,19 +569,6 @@ export default class DatePicker extends React.Component {
 
     // if calendar is open, these keys will focus the selected day
     if (this.state.open) {
-      if (eventKey === "Tab") {
-        event.preventDefault();
-        if (
-          this.inputOk() &&
-          this.state.lastPreSelectChange === PRESELECT_CHANGE_VIA_NAVIGATE
-        ) {
-          this.handleSelect(copy, event);
-          !this.props.shouldCloseOnSelect && this.setPreSelection(copy);
-        } else {
-          this.setOpen(false);
-        }
-        return;
-      }
       if (eventKey === "ArrowDown" || eventKey === "ArrowUp") {
         event.preventDefault();
         const selectedDay =
@@ -594,7 +581,17 @@ export default class DatePicker extends React.Component {
       }
 
       const copy = newDate(this.state.preSelection);
-      if (eventKey === "Enter") {
+
+      /*      if (eventKey === "Tab") {
+        if (this.inputOk()) {
+          this.handleSelect(copy, event);
+          !this.props.shouldCloseOnSelect && this.setPreSelection(copy);
+        } else {
+          this.setOpen(false);
+        }
+        return;
+      }*/
+      if (eventKey === "Enter" || eventKey === "Tab") {
         event.preventDefault();
         if (
           this.inputOk() &&
