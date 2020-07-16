@@ -3132,7 +3132,7 @@ var St = (function(e) {
               }
               var n = ge(s.state.preSelection);
               "Enter" === t || "Tab" === t
-                ? (e.preventDefault(),
+                ? ("Enter" === t && e.preventDefault(),
                   s.inputOk() && s.state.lastPreSelectChange === Et
                     ? (s.handleSelect(n, e),
                       !s.props.shouldCloseOnSelect && s.setPreSelection(n))

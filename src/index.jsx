@@ -592,7 +592,7 @@ export default class DatePicker extends React.Component {
         return;
       }*/
       if (eventKey === "Enter" || eventKey === "Tab") {
-        event.preventDefault();
+        eventKey === "Enter" && event.preventDefault();
         if (
           this.inputOk() &&
           this.state.lastPreSelectChange === PRESELECT_CHANGE_VIA_NAVIGATE
